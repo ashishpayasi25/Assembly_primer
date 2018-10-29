@@ -10,7 +10,7 @@ section .text
     global main
 
 main:
-    push ebp
+    push ebp                 ; Pushes the stak pointer
     mov ebp,esp
 
     push request
@@ -18,7 +18,7 @@ main:
     call printf
 
     push num
-    push formnum
+    push formnum              ;Calls the scan function with  arguments
     call scanf
 
     mov ebx,1
